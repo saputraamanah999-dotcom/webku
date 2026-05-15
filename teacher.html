@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="id">
+<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Dashboard Guru</title><link rel="stylesheet" href="styles.css" /></head>
+<body data-role="guru">
+<div class="page-shell">
+<aside class="sidebar glass"><h3 id="userName">Guru</h3><p id="userRole"></p><small id="nowClock"></small><div class="nav-links"><a class="btn secondary" href="about.html">Tentang</a><button id="logoutBtn" class="btn danger">Exit</button></div></aside>
+<main class="content">
+<section class="card glass"><h2>Monitoring Jarak Jauh</h2><p id="notifArea"></p></section>
+<section class="widget-grid"><article class="kpi card glass"><h4>Total Absensi Sekolah</h4><p id="statAttend">0</p></article><article class="kpi card glass"><h4>Total Izin Menunggu</h4><p id="statPermit">0</p></article><article class="kpi card glass"><h4>Total Pelanggaran</h4><p id="statViolation">0</p></article></section>
+<section class="card glass table-wrap"><h3>Daftar Pengajuan Izin Terbaru</h3><table><thead><tr><th>Nama</th><th>Kategori</th><th>Kelas</th><th>Status</th></tr></thead><tbody id="recentTableBody"></tbody></table></section>
+<section class="card glass"><h3>Input Pelanggaran (Guru)</h3><form id="violationForm" class="form-grid"><label>UID Siswa (opsional)<input name="uidSiswa" /></label><label>Nama Lengkap<input name="namaLengkap" required /></label><label>Kelas<input name="kelas" required /></label><label>Jurusan<input name="jurusan" required /></label><label>Jenis Pelanggaran<select name="jenisPelanggaran"><option>Terlambat</option><option>Rambut Panjang</option><option>Tidak Pakai Atribut</option><option>Lainnya</option></select></label><label>Catatan<textarea name="catatan"></textarea></label><button class="btn warn" type="submit">Simpan Catatan</button></form></section>
+</main>
+</div><script type="module" src="app.js"></script>
+</body></html>
