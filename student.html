@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Siswa</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-role="siswa">
+  <div class="page-shell">
+    <aside class="sidebar glass animated">
+      <h3 id="userName">Siswa</h3>
+      <p id="userRole"></p>
+      <p id="classText"></p>
+      <small id="nowClock"></small>
+      <hr>
+      <div class="nav-links">
+        <a class="btn secondary" href="about.html">Tentang Sekolah</a>
+        <button id="logoutBtn" class="btn danger">Exit / Logout</button>
+      </div>
+    </aside>
+    <main class="content">
+      <section class="card glass"><h2>Notifikasi</h2><p id="notifArea"></p></section>
+      <section class="widget-grid">
+        <article class="kpi card glass"><h4>Total Absensi</h4><p id="statAttend">0</p></article>
+        <article class="kpi card glass"><h4>Total Pengajuan Izin</h4><p id="statPermit">0</p></article>
+        <article class="kpi card glass"><h4>Total Pelanggaran Tercatat</h4><p id="statViolation">0</p></article>
+      </section>
+
+      <section class="card glass">
+        <h3>Form Absensi Harian</h3>
+        <form id="attendanceForm" class="form-grid">
+          <label>Status Kehadiran
+            <select name="statusKehadiran" required>
+              <option value="hadir">Hadir</option>
+              <option value="terlambat">Terlambat</option>
+              <option value="dinas">Dinas</option>
+            </select>
+          </label>
+          <button class="btn primary" type="submit">Kirim Absensi</button>
+        </form>
+      </section>
+
+      <section class="card glass">
+        <h3>Pengajuan Izin / Sakit / Acara</h3>
+        <form id="permitForm" class="form-grid">
+          <label>Kategori
+            <select name="kategori" required>
+              <option value="izin">Izin</option>
+              <option value="sakit">Sakit</option>
+              <option value="acara">Ada Acara</option>
+            </select>
+          </label>
+          <label>Kelas<input name="kelas" required /></label>
+          <label>Jurusan<input name="jurusan" required /></label>
+          <label>Tujuan Bagikan Surat
+            <select name="tujuan" required>
+              <option value="guru-mapel">Guru Mata Pelajaran</option>
+              <option value="wali-kelas">Wali Kelas</option>
+              <option value="grup-kelas">Grup Kelas</option>
+            </select>
+          </label>
+          <label>Detail Keperluan<textarea name="detail" required></textarea></label>
+          <label>Upload Foto Surat Bukti<input type="file" name="suratFile" accept="image/*" /></label>
+          <button class="btn primary" type="submit">Kirim Pengajuan</button>
+        </form>
+      </section>
+
+      <section class="card glass">
+        <h3>Edit Profil Siswa</h3>
+        <form id="profileForm" class="form-grid">
+          <label>Nama Lengkap<input name="namaLengkap" required /></label>
+          <label>Kelas<input name="kelas" required /></label>
+          <label>Jurusan<input name="jurusan" required /></label>
+          <button class="btn secondary" type="submit">Simpan Profil</button>
+        </form>
+      </section>
+    </main>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

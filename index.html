@@ -1,10 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-  <title>Webku</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Absensi SMK TI Bali Global Karangasem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <h1>Website Saya Berhasil</h1>
-  <img src="https://saputraamanah999-dotcom.github.io/webku/foto.jpg">
+<body class="landing-body">
+  <header class="topbar glass">
+    <div>
+      <h1>SMK TI Bali Global Karangasem</h1>
+      <p>Sistem Absensi, Perizinan, dan Monitoring Sekolah</p>
+    </div>
+    <a href="about.html" class="btn secondary">Tentang Sekolah</a>
+  </header>
+
+  <main class="landing-grid">
+    <section class="card glass hero-card">
+      <h2>Selamat Datang 👋</h2>
+      <p>
+        Platform ini mendukung akses untuk <strong>Guru</strong>, <strong>Siswa</strong>,
+        <strong>Wali Kelas</strong>, <strong>OSIS</strong>, <strong>Ketua Kelas</strong>,
+        <strong>Sekretaris</strong>, dan <strong>Bendahara</strong>.
+      </p>
+      <ul class="feature-list">
+        <li>Absensi harian real-time</li>
+        <li>Izin/Sakit/Acara + upload surat foto ke guru</li>
+        <li>Monitoring pelanggaran & data OSIS</li>
+        <li>Notifikasi otomatis pagi/sore sesuai jenjang</li>
+        <li>Jadwal kelas, piket, kas kelas, dan pengumuman</li>
+      </ul>
+    </section>
+
+    <section class="card glass auth-card">
+      <h3>Login Akun</h3>
+      <p>Login siswa menggunakan Gmail, role lain dapat ditambahkan oleh developer/admin.</p>
+
+      <div class="auth-actions">
+        <button id="googleLoginBtn" class="btn primary">Login dengan Gmail</button>
+        <button id="developerDemoBtn" class="btn warn">Login Developer (Email + Sandi)</button>
+      </div>
+
+      <form id="developerLoginForm" class="hidden form-grid">
+        <label>
+          Email Developer
+          <input type="email" id="devEmail" placeholder="developer@email.com" required />
+        </label>
+        <label>
+          Password Developer
+          <input type="password" id="devPassword" placeholder="••••••••" required />
+        </label>
+        <button type="submit" class="btn primary">Masuk sebagai Developer</button>
+      </form>
+
+      <small class="muted">
+        Setelah login, sistem akan mengarahkan pengguna ke halaman sesuai role.
+      </small>
+      <div id="authMessage" class="notice"></div>
+    </section>
+  </main>
+
+  <footer class="footer glass">
+    <p>© 2026 SMK TI Bali Global Karangasem • Web Absensi Terintegrasi Firebase</p>
+  </footer>
+
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="main.js"></script>
 </body>
 </html>

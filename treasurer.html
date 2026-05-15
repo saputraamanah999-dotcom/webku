@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="id">
+<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Dashboard Bendahara</title><link rel="stylesheet" href="styles.css" /></head>
+<body data-role="bendahara">
+<div class="page-shell">
+<aside class="sidebar glass"><h3 id="userName">Bendahara</h3><p id="userRole"></p><small id="nowClock"></small><div class="nav-links"><button id="logoutBtn" class="btn danger">Exit</button></div></aside>
+<main class="content">
+<section class="card glass"><h2>Administrasi Kas Kelas</h2><p id="notifArea"></p></section>
+<section class="widget-grid"><article class="kpi card glass"><h4>Total Absensi</h4><p id="statAttend">0</p></article><article class="kpi card glass"><h4>Pengajuan Izin</h4><p id="statPermit">0</p></article><article class="kpi card glass"><h4>Pelanggaran</h4><p id="statViolation">0</p></article></section>
+<section class="card glass"><h3>Riwayat Izin Terbaru (untuk administrasi)</h3><div class="table-wrap"><table><thead><tr><th>Nama</th><th>Kategori</th><th>Kelas</th><th>Status</th></tr></thead><tbody id="recentTableBody"></tbody></table></div></section>
+</main></div><script type="module" src="app.js"></script>
+</body></html>

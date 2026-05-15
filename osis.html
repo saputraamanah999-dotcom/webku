@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="id">
+<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Dashboard OSIS</title><link rel="stylesheet" href="styles.css" /></head>
+<body data-role="osis">
+<div class="page-shell">
+<aside class="sidebar glass"><h3 id="userName">OSIS</h3><p id="userRole"></p><small id="nowClock"></small><div class="nav-links"><button id="logoutBtn" class="btn danger">Exit</button></div></aside>
+<main class="content">
+<section class="card glass"><h2>Panel Penertiban Siswa</h2><p id="notifArea"></p></section>
+<section class="widget-grid"><article class="kpi card glass"><h4>Total Absensi</h4><p id="statAttend">0</p></article><article class="kpi card glass"><h4>Total Izin</h4><p id="statPermit">0</p></article><article class="kpi card glass"><h4>Total Temuan OSIS</h4><p id="statViolation">0</p></article></section>
+<section class="card glass"><h3>Form Catatan Temuan OSIS</h3><form id="violationForm" class="form-grid"><label>UID Siswa<input name="uidSiswa" /></label><label>Nama Lengkap<input name="namaLengkap" required /></label><label>Kelas<input name="kelas" required /></label><label>Jurusan<input name="jurusan" required /></label><label>Masalah<select name="jenisPelanggaran"><option>Terlambat</option><option>Rambut Panjang</option><option>Seragam Tidak Rapi</option><option>Membawa Barang Terlarang</option><option>Lainnya (isi catatan)</option></select></label><label>Catatan Detail<textarea name="catatan" required></textarea></label><button class="btn warn" type="submit">Kirim Catatan OSIS</button></form></section>
+</main></div><script type="module" src="app.js"></script>
+</body></html>
